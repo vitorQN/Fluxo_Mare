@@ -1,0 +1,122 @@
+.hero-section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  isolation: isolate;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  background: linear-gradient(to bottom,
+      rgba(246, 241, 235, 0),
+      rgba(246, 241, 235, 0.82) 72%,
+      #f6f1eb);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: auto;
+  width: 100%;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text {
+  max-width: 620px;
+  padding: 48px 0;
+}
+
+.hero-text p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+  color: #f1e8df;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.hero-text h2 {
+  font-size: clamp(44px, 7vw, 78px);
+  line-height: 1.05;
+  color: white;
+  max-width: 600px;
+  font-weight: 500;
+}
+
+.hero-text p:last-of-type {
+  margin-top: 30px;
+  max-width: 500px;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #f2ebe5;
+}
+
+.hero-text button,
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  border: 1px solid white;
+  color: white;
+  padding: 16px 34px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 12px;
+  transition: 0.3s;
+  background: transparent;
+  min-height: 52px;
+}
+
+.hero-text button:hover,
+.hero-button:hover {
+  background: white;
+  color: black;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image div {
+  background: #efe6db;
+  padding: 20px;
+  border-radius: 35px;
+  transform: rotate(3deg);
+  transition: 0.4s;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image div:hover {
+  transform: rotate(0deg);
+}
+
+.hero-image img {
+  width: 420px;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 24px;
+}

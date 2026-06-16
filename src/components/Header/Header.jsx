@@ -8,40 +8,28 @@ function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-[#f6f1eb]/80 backdrop-blur-md border-b border-[#e6ddd3]">
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
+        <header>
+            <div>
                 <div className="header-logo">
                     <img src={images.logoazul} alt="Fluxo Mare logo" />
                 </div>
 
-                <div className="text-center">
-                    <h1 className="text-2xl tracking-[0.4em] uppercase text-[#67605c]">
+                <div>
+                    <h1>
                         Fluxo Maré
                     </h1>
-                    <p className="text-xs tracking-[0.3em] mt-1 text-[#90857d] uppercase">
+                    <p>
                         tudo que flui encontra o oceano
                     </p>
                 </div>
 
-                <nav className="desktop-nav hidden md:flex items-center gap-8 text-sm uppercase tracking-widest">
-                    <a href="#collection" className="hover:text-black transition">
-                        coleção
-                    </a>
-                    <a href="#catalogo" className="hover:text-black transition">
-                        catálogo
-                    </a>
-                    <a href="#about" className="hover:text-black transition">
-                        sobre
-                    </a>
-                    <a href="#history" className="hover:text-black transition">
-                        nossa história
-                    </a>
-                    <a href="#sustainability" className="hover:text-black transition">
-                        sustentabilidade
-                    </a>
-                    <a href="#contact" className="hover:text-black transition">
-                        contato
-                    </a>
+                <nav className="desktop-nav">
+                    <a href="#collection">coleção</a>
+                    <a href="#catalogo">catálogo</a>
+                    <a href="#about">sobre</a>
+                    <a href="#history">nossa história</a>
+                    <a href="#sustainability">sustentabilidade</a>
+                    <a href="#contact">contato</a>
                 </nav>
 
                 <button
@@ -58,31 +46,14 @@ function Header() {
                 </button>
             </div>
 
-            <nav
-                id="mobile-menu"
-                className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`}
-            >
-                <a href="#collection" onClick={() => setIsMenuOpen(false)}>
-                    cole&ccedil;&atilde;o
-                </a>
-                <a href="#catalogo" onClick={() => setIsMenuOpen(false)}>
-                    cat&aacute;logo
-                </a>
-                <a href="#about" onClick={() => setIsMenuOpen(false)}>
-                    sobre
-                </a>
-                <a href="#piaui" onClick={() => setIsMenuOpen(false)}>
-                    Piau&iacute;
-                </a>
-                <a href="#history" onClick={() => setIsMenuOpen(false)}>
-                    nossa hist&oacute;ria
-                </a>
-                <a href="#sustainability" onClick={() => setIsMenuOpen(false)}>
-                    sustentabilidade
-                </a>
-                <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                    contato
-                </a>
+            <nav id="mobile-menu" className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`}>
+                <a href="#collection" onClick={() => setIsMenuOpen(false)}>coleção</a>
+                <a href="#catalogo" onClick={() => setIsMenuOpen(false)}>catálogo</a>
+                <a href="#about" onClick={() => setIsMenuOpen(false)}>sobre</a>
+                <a href="#piaui" onClick={() => setIsMenuOpen(false)}>Piauí</a>
+                <a href="#history" onClick={() => setIsMenuOpen(false)}>nossa história</a>
+                <a href="#sustainability" onClick={() => setIsMenuOpen(false)}>sustentabilidade</a>
+                <a href="#contact" onClick={() => setIsMenuOpen(false)}>contato</a>
             </nav>
         </header>
     );
