@@ -1,4 +1,3 @@
-
 header {
   position: fixed;
   top: 0;
@@ -20,9 +19,48 @@ header>div {
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  header>div {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 header button {
   font-size: 26px;
   color: #6b625b;
+}
+
+header h1 {
+  font-size: 28px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #67605c;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px;
+    letter-spacing: 0.22em;
+  }
+}
+
+header p {
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #978d84;
+}
+
+@media (max-width: 768px) {
+  header p {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
 }
 
 .header-logo {
@@ -37,21 +75,13 @@ header button {
   object-fit: contain;
 }
 
-header h1 {
-  font-size: 28px;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: #67605c;
-  font-weight: 500;
+@media (max-width: 768px) {
+  .header-logo img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
-header p {
-  margin-top: 6px;
-  font-size: 11px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: #978d84;
-}
 
 nav {
   display: flex;
@@ -71,6 +101,16 @@ nav a:hover {
   color: black;
 }
 
+.desktop-nav {
+  /* inherits from nav */
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
 .mobile-menu-button {
   display: none;
   width: 42px;
@@ -83,6 +123,13 @@ nav a:hover {
   gap: 5px;
   background: rgba(248, 243, 238, 0.9);
   transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .mobile-menu-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
 }
 
 .mobile-menu-button span {
@@ -108,22 +155,7 @@ nav a:hover {
   display: none;
 }
 
-
 @media (max-width: 1024px) {
-
-  .desktop-nav {
-    display: none;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .mobile-menu-button {
-    display: inline-flex;
-    flex: 0 0 auto;
-  }
-
   .mobile-menu {
     position: absolute;
     top: 100%;
@@ -154,5 +186,15 @@ nav a:hover {
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #625b56;
+  }
+}
+
+.text-center {
+  /* base style handled inline */
+}
+
+@media (max-width: 1024px) {
+  .text-center {
+    text-align: center;
   }
 }
