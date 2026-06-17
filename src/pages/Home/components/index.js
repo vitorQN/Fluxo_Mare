@@ -1,0 +1,6 @@
+export { default as About } from "./About/About"
+export { default as BrandHistory } from "./BrandHistory/BrandHistory"
+export { default as FeatureBrand } from "./FeatureBrand/FeatureBrand"
+export { default as Hero } from "./Hero/Hero"
+export { default as HeroPlace } from "./HeroPlace/HeroPlace"
+export { default as HeroVideo } from "./HeroVideo/HeroVideo"

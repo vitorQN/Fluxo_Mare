@@ -1,5 +1,5 @@
 import './Hero.css';
-import * as images from '../../assets/images';
+import * as images from '../../../../assets/images';
 
 
 function Hero() {

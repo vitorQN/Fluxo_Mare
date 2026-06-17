@@ -1,5 +1,5 @@
 import './HeroVideo.css'
-import * as images from "../../assets/images";
+import * as images from "../../../../assets/images";
 
 function HeroVideo() {
     return (

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import './BrandHistory.css'
-import * as images from "../../assets/images";
+import * as images from "../../../../assets/images";
 
 function BrandHistory() {
 

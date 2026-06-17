@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import './About.css'
-import * as images from "../../assets/images"
+import * as images from "../../../../assets/images";
 
 const About = () => {
 
