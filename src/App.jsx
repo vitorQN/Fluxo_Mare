@@ -8,6 +8,8 @@ import Catalogo from "./components/Catalogo/Catalogo";
 import Collection from "./components/Collection/Collection";
 import HeroPlace from "./components/HeroPlace/HeroPlace";
 import BrandHistory from "./components/BrandHistory/BrandHistory";
+import FeatureBrand from "./components/FeatureBrand/FeatureBrand";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +40,12 @@ function App() {
 
       { BrandHistory }
       < BrandHistory />
+
+      { FeatureBrand }
+      <FeatureBrand />
+
+      { Footer }
+      <Footer />
 
 
     </div>
