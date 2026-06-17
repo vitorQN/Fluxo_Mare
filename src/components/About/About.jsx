@@ -1,13 +1,45 @@
-import React from 'react';
+import { useEffect, useRef, useState } from "react";
 import './About.css'
 import * as images from "../../assets/images"
 
 const About = () => {
+
+    const historyContentRef = useRef(null);
+        const [isHistoryContentVisible, setIsHistoryContentVisible] = useState(false);
+    
+        useEffect(() => {
+            const historyContent = historyContentRef.current;
+    
+            if (!historyContent) {
+                return undefined;
+            }
+    
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setIsHistoryContentVisible(true);
+                        observer.unobserve(entry.target);
+                    }
+                },
+                {
+                    threshold: 0.25,
+                }
+            );
+    
+            observer.observe(historyContent);
+    
+            return () => {
+                observer.disconnect();
+            };
+        }, []);
+
     return (
         <section
             id="about"
         >
-            <div>
+            <div ref={historyContentRef}
+                className={`history-content scroll-fade-in ${isHistoryContentVisible ? "is-visible" : ""
+                    }`}>
                 <p>
                     Sobre a Fluxo Maré
                 </p>

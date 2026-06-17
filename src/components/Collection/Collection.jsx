@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useEffect, useState } from "react";
 import './Collection.css'
 import Products from '../../Features/Components/Products';
 
@@ -23,13 +23,44 @@ function Collection() {
         });
     };
 
+    const historyContentRef = useRef(null);
+    const [isHistoryContentVisible, setIsHistoryContentVisible] = useState(false);
+
+    useEffect(() => {
+        const historyContent = historyContentRef.current;
+
+        if (!historyContent) {
+            return undefined;
+        }
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsHistoryContentVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            {
+                threshold: 0.25,
+            }
+        );
+
+        observer.observe(historyContent);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
 
 
     return (
         <section id="collection">
             <div>
                 <div className="collection-header">
-                    <div>
+                    <div ref={historyContentRef}
+                        className={`history-content scroll-fade-in ${isHistoryContentVisible ? "is-visible" : ""
+                            }`}>
                         <p>
                             coleção
                         </p>
@@ -60,7 +91,7 @@ function Collection() {
                         </button>
                     </div>
 
-                    <Products ref={collectionTrackRef}/>
+                    <Products ref={collectionTrackRef} />
 
                 </div>
             </div>
