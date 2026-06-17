@@ -34,3 +34,12 @@ img {
 .app {
   min-height: 100vh;
 }
+
+
+@media (max-width: 1024px) {
+  
+  #about img,
+  .history-image img {
+    height: 120px;
+  }
+}
