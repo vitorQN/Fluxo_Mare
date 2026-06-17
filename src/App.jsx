@@ -10,6 +10,7 @@ import HeroPlace from "./components/HeroPlace/HeroPlace";
 import BrandHistory from "./components/BrandHistory/BrandHistory";
 import FeatureBrand from "./components/FeatureBrand/FeatureBrand";
 import Footer from "./components/Footer/Footer";
+import FloatingBag from "./Features/Components/FloatingBag/FloatingBag";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -47,6 +48,8 @@ function App() {
       { Footer }
       <Footer />
 
+      { FloatingBag }
+      <FloatingBag />
 
     </div>
   )

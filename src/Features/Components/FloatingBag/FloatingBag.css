@@ -1,0 +1,57 @@
+.floating-bag {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 1100;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #d3c5b8;
+  border-radius: 50%;
+  background: rgba(248, 243, 238, 0.94);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.floating-bag:hover {
+  background: #5f5a56;
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 768px) {
+  .floating-bag {
+    right: 18px;
+    bottom: 18px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.floating-bag-handle {
+  position: absolute;
+  top: 15px;
+  width: 18px;
+  height: 14px;
+  border: 2px solid #746a62;
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  transition: border-color 0.3s ease;
+}
+
+.floating-bag-body {
+  width: 27px;
+  height: 24px;
+  margin-top: 9px;
+  border: 2px solid #746a62;
+  border-radius: 3px 3px 6px 6px;
+  transition: border-color 0.3s ease;
+}
+
+.floating-bag:hover .floating-bag-handle,
+.floating-bag:hover .floating-bag-body {
+  border-color: #f8f3ee;
+}
