@@ -7,6 +7,7 @@ import HeroVideo from "./components/HeroVideo/HeroVideo";
 import Catalogo from "./components/Catalogo/Catalogo";
 import Collection from "./components/Collection/Collection";
 import HeroPlace from "./components/HeroPlace/HeroPlace";
+import BrandHistory from "./components/BrandHistory/BrandHistory";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -34,6 +35,10 @@ function App() {
 
       { HeroPlace }
       <HeroPlace />
+
+      { BrandHistory }
+      < BrandHistory />
+
 
     </div>
   )
