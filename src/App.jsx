@@ -4,6 +4,8 @@ import Hero from "./components/Hero/Hero";
 import './App.css'
 import About from "./components/About/About";
 import HeroVideo from "./components/HeroVideo/HeroVideo";
+import Catalogo from "./components/Catalogo/Catalogo";
+import Collection from "./components/Collection/Collection";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,8 +22,14 @@ function App() {
       { About }
       <About />
 
+      { Collection }
+      <Collection />
+      
       { HeroVideo }
       <HeroVideo />
+
+      { Catalogo }
+      <Catalogo />
 
     </div>
   )
