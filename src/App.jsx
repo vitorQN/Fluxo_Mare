@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import HeroVideo from "./components/HeroVideo/HeroVideo";
 import Catalogo from "./components/Catalogo/Catalogo";
 import Collection from "./components/Collection/Collection";
+import HeroPlace from "./components/HeroPlace/HeroPlace";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +31,9 @@ function App() {
 
       { Catalogo }
       <Catalogo />
+
+      { HeroPlace }
+      <HeroPlace />
 
     </div>
   )
