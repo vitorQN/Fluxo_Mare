@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom'
 import "./ProdutoPage.css";
 import '../../../src/App.css'
@@ -22,6 +22,7 @@ const formatPreco = (v) =>
   v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
 export default function ProdutoPage() {
+  
   const [tamanho, setTamanho] = useState(null);
   const [salvo,   setSalvo]   = useState(false);
   const { id } = useParams();
@@ -31,6 +32,10 @@ export default function ProdutoPage() {
   const handleSelect = (product) => {
     navigate(`/produto/${product.id}`);
   };
+
+  useEffect(() => {
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [id]);
 
   return (
     <div className="produto-page">

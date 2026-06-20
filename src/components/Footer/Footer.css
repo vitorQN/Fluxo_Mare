@@ -1,6 +1,7 @@
 footer {
   background: #f4eee7;
   border-top: 1px solid #ddd2c7;
+  width: 100Vw;
 }
 
 footer > div:first-child {
