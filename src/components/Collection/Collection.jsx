@@ -1,9 +1,10 @@
 import { useContext, useRef, useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import './Collection.css'
 import Products from '../../Features/Components/Products';
 
 
-function Collection() {
+function Collection({ products }) {
 
     const collectionTrackRef = useRef(null);
     const scrollCollection = (direction) => {
@@ -90,9 +91,9 @@ function Collection() {
                             ›
                         </button>
                     </div>
-
+                    
                     <Products ref={collectionTrackRef} />
-
+                    
                 </div>
             </div>
         </section>

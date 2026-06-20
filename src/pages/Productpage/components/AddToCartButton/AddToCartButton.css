@@ -1,0 +1,27 @@
+.add-to-cart-btn {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 40px;
+  border: none;
+  background: #b9aa9c;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, opacity 0.2s;
+}
+
+.add-to-cart-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-to-cart-btn.success {
+  background: #7a9a7a;
+}
+
+.add-to-cart-btn:hover:not(.disabled):not(.success) {
+  background: #d4c7bb;
+}

@@ -1,0 +1,22 @@
+.sustentability-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(107, 126, 143, 0.10);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 24px;
+}
+
+.sustentability-badge__icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.sustentability-badge__text {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  color: #6b7e8f;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}

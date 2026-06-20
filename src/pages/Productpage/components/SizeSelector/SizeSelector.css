@@ -1,0 +1,90 @@
+.size-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.size-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: #6b5c4e;
+  text-transform: uppercase;
+}
+
+.size-guide-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #b9aa9c;
+  font-family: 'Arial', sans-serif;
+  text-decoration: underline;
+  letter-spacing: 0.05em;
+  padding: 0;
+}
+
+.size-guide-btn:hover {
+  color: #b9aa9c;
+}
+
+.tamanhos-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tam-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid #c0b5a6;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: #3a3530;
+  position: relative;
+  transition: all 0.18s;
+}
+
+.tam-btn:hover:not(:disabled) {
+  border-color: #b9aa9c;
+  color: #b9aa9c;
+}
+
+.tam-btn.active {
+  border: 2px solid #b9aa9c;
+  background: #b9aa9c;
+  color: #fff;
+}
+
+.tam-btn.esgotado {
+  color: #c0b5a6;
+  cursor: not-allowed;
+  background: #f0ece6;
+}
+
+.esgotado-x {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 8px;
+  color: #b08060;
+  background: #eae5dd;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.size-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #b08060;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.04em;
+}
