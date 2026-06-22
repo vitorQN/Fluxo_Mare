@@ -13,7 +13,7 @@ function HeroVideo() {
                     loop
                     playsInline
                 >
-                    <source src={images.videoPro} type="video/mp4" />
+                    <source src={images.fluxovideo} type="video/mp4" />
                 </video>
             </div>
 

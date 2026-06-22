@@ -21,7 +21,7 @@ import foto36 from "./produtos/foto36.png";
 import foto37 from "./produtos/foto37.png";
 import foto38 from "./produtos/foto38.png";
 
-import videoPro from "./videoPro.mp4";
+import fluxovideo from "./fluxovideo.MOV";
 
 export {
   foto1,
@@ -45,5 +45,5 @@ export {
   foto37,
   foto38,
   logoazul,
-  videoPro
+  fluxovideo
 };
