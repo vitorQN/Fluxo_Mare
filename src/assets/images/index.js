@@ -21,7 +21,7 @@ import foto36 from "./produtos/foto36.png";
 import foto37 from "./produtos/foto37.png";
 import foto38 from "./produtos/foto38.png";
 
-import fluxovideo from "./fluxovideo.MOV";
+import fluxovideo from "./fluxovideo.mp4";
 
 export {
   foto1,
